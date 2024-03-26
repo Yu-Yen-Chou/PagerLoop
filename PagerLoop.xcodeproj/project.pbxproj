@@ -14,6 +14,11 @@
 		E14D72082BB2BA21002DCEFE /* PagerLoopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14D72072BB2BA21002DCEFE /* PagerLoopTests.swift */; };
 		E14D72122BB2BA21002DCEFE /* PagerLoopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14D72112BB2BA21002DCEFE /* PagerLoopUITests.swift */; };
 		E14D72142BB2BA21002DCEFE /* PagerLoopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14D72132BB2BA21002DCEFE /* PagerLoopUITestsLaunchTests.swift */; };
+		E14D72212BB2BA3D002DCEFE /* CustomPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14D72202BB2BA3D002DCEFE /* CustomPager.swift */; };
+		E14D72262BB2BB1A002DCEFE /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = E14D72252BB2BB1A002DCEFE /* URLImage */; };
+		E14D72282BB2BB1A002DCEFE /* URLImageStore in Frameworks */ = {isa = PBXBuildFile; productRef = E14D72272BB2BB1A002DCEFE /* URLImageStore */; };
+		E14D722B2BB2BB31002DCEFE /* SwiftUIPager in Frameworks */ = {isa = PBXBuildFile; productRef = E14D722A2BB2BB31002DCEFE /* SwiftUIPager */; };
+		E14D722F2BB2C1FB002DCEFE /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E14D722E2BB2C1FB002DCEFE /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +50,7 @@
 		E14D720D2BB2BA21002DCEFE /* PagerLoopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PagerLoopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E14D72112BB2BA21002DCEFE /* PagerLoopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagerLoopUITests.swift; sourceTree = "<group>"; };
 		E14D72132BB2BA21002DCEFE /* PagerLoopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagerLoopUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E14D72202BB2BA3D002DCEFE /* CustomPager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +58,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E14D722F2BB2C1FB002DCEFE /* Kingfisher in Frameworks */,
+				E14D72282BB2BB1A002DCEFE /* URLImageStore in Frameworks */,
+				E14D72262BB2BB1A002DCEFE /* URLImage in Frameworks */,
+				E14D722B2BB2BB31002DCEFE /* SwiftUIPager in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +107,7 @@
 			children = (
 				E14D71F52BB2BA1F002DCEFE /* PagerLoopApp.swift */,
 				E14D71F72BB2BA1F002DCEFE /* ContentView.swift */,
+				E14D72202BB2BA3D002DCEFE /* CustomPager.swift */,
 				E14D71F92BB2BA20002DCEFE /* Assets.xcassets */,
 				E14D71FB2BB2BA20002DCEFE /* PagerLoop.entitlements */,
 				E14D71FC2BB2BA20002DCEFE /* Preview Content */,
@@ -145,6 +156,12 @@
 			dependencies = (
 			);
 			name = PagerLoop;
+			packageProductDependencies = (
+				E14D72252BB2BB1A002DCEFE /* URLImage */,
+				E14D72272BB2BB1A002DCEFE /* URLImageStore */,
+				E14D722A2BB2BB31002DCEFE /* SwiftUIPager */,
+				E14D722E2BB2C1FB002DCEFE /* Kingfisher */,
+			);
 			productName = PagerLoop;
 			productReference = E14D71F22BB2BA1F002DCEFE /* PagerLoop.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +234,11 @@
 				Base,
 			);
 			mainGroup = E14D71E92BB2BA1F002DCEFE;
+			packageReferences = (
+				E14D72242BB2BB1A002DCEFE /* XCRemoteSwiftPackageReference "url-image" */,
+				E14D72292BB2BB31002DCEFE /* XCRemoteSwiftPackageReference "SwiftUIPager" */,
+				E14D722D2BB2C1FB002DCEFE /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = E14D71F32BB2BA1F002DCEFE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -260,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E14D71F82BB2BA1F002DCEFE /* ContentView.swift in Sources */,
+				E14D72212BB2BA3D002DCEFE /* CustomPager.swift in Sources */,
 				E14D71F62BB2BA1F002DCEFE /* PagerLoopApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -609,6 +632,56 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E14D72242BB2BB1A002DCEFE /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.1;
+			};
+		};
+		E14D72292BB2BB31002DCEFE /* XCRemoteSwiftPackageReference "SwiftUIPager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/fermoya/SwiftUIPager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.0;
+			};
+		};
+		E14D722D2BB2C1FB002DCEFE /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E14D72252BB2BB1A002DCEFE /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E14D72242BB2BB1A002DCEFE /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+		E14D72272BB2BB1A002DCEFE /* URLImageStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E14D72242BB2BB1A002DCEFE /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImageStore;
+		};
+		E14D722A2BB2BB31002DCEFE /* SwiftUIPager */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E14D72292BB2BB31002DCEFE /* XCRemoteSwiftPackageReference "SwiftUIPager" */;
+			productName = SwiftUIPager;
+		};
+		E14D722E2BB2C1FB002DCEFE /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E14D722D2BB2C1FB002DCEFE /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E14D71EA2BB2BA1F002DCEFE /* Project object */;
 }
